@@ -13,4 +13,11 @@ class Contact {
   String toString() {
     return 'Contact{id: $id, name: $name, accountNumber: $accountNumber}';
   }
+
+  factory Contact.fromJson(Map<String, dynamic> json) {
+    return Contact(json['id'], json['name'], json['accountNumber']);
+  }
+
+  Map<String, dynamic> toJson() =>
+      {'id': id, 'name': name, 'accountNumber': accountNumber};
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class EditField extends StatelessWidget {
-  final TextEditingController controller;
-  final String labelText;
-  final String hintText;
-  final IconData icon;
+  final TextEditingController? controller;
+  final String? labelText;
+  final String? hintText;
+  final IconData? icon;
 
   EditField({
     this.controller,

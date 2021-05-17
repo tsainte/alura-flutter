@@ -52,8 +52,8 @@ class TransferFormState extends State<TransferForm> {
   }
 
   void _createTransfer(BuildContext context) {
-    final int accountNumber = int.tryParse(_accountNumberController.text);
-    final double amount = double.tryParse(_amountController.text);
+    final int? accountNumber = int.tryParse(_accountNumberController.text);
+    final double? amount = double.tryParse(_amountController.text);
 
     if (accountNumber != null && amount != null) {
       final createdTransfer = Transfer(amount, accountNumber);

@@ -41,7 +41,7 @@ class TransferListState extends State<TransferList> {
     );
   }
 
-  void _refresh(Transfer receivedTransfer) {
+  void _refresh(Transfer? receivedTransfer) {
     if (receivedTransfer != null) {
       setState(() => widget._transfers.add(receivedTransfer));
     }
