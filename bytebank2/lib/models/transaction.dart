@@ -1,24 +1,27 @@
 import 'contact.dart';
 
 class Transaction {
+  final String id;
   final double value;
   final Contact contact;
 
   Transaction(
+    this.id,
     this.value,
     this.contact,
   );
 
   @override
   String toString() {
-    return 'Transaction{value: $value, contact: $contact}';
+    return 'Transaction{id: $id, value: $value, contact: $contact}';
   }
 
   factory Transaction.fromJson(Map<String, dynamic> json) {
-    return Transaction(json['value'], Contact.fromJson(json['contact']));
+    return Transaction(
+        json['id'], json['value'], Contact.fromJson(json['contact']));
   }
 
   Map<String, dynamic> toJson() {
-    return {'value': value, 'contact': contact.toJson()};
+    return {'id': id, 'value': value, 'contact': contact.toJson()};
   }
 }
